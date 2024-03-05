@@ -1,6 +1,3 @@
-
-
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import profilepicture from "../img/me.jpeg";
 /*WEB*/
 import htmlicon from "../icons/web/htmlicon.svg";
@@ -33,6 +30,9 @@ import python from "../icons/embarque/python.svg";
 /*Other */
 import git from "../icons/other/git.svg";
 import docker from "../icons/other/docker.svg";
+/* WorkAT */
+import solmani from "../icons/workat/solmani_logo.png"
+
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail, FiCodepen } from "react-icons/fi";
 import Imprint from "../../components/Imprint";
@@ -46,8 +46,8 @@ export const headerIntroData = {
   },
   subtitle: "Fullstack Developer ",
   description: {
-    fr: "Je m'appelle Nathan Füllemann et je vis à Lausanne en Suisse. Je suis un jeune front et backend devloppeur de 20ans.J'ai commencé l'informatique à l'ETML et le fait que l'on soit totallement libre en developpement m'a tout de suite plu. J'ai acquis de nombreuses compétences par mes propres moyens, notamment en suivant des tutoriels sur Internet.Après avoir passer 4 ans dans cette école avec un stage d'une année chez Solmani SA. J'en suis ressorti avec un CFC d'informaticien généraliste orienté développement et une maturité professionnel.Je suis acctuellement à l'HEIG-VD pour faire un bachelor en sécurité informatique.Sinon a part l'informatique j'aime faire du sport, faire de la photographie et faire de la musique électronique.",
-    en: "I'm Alpay, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for web development. Let's shape digital solutions together and shape the future!",
+    fr: " J'ai découvert l'informatique lors d'un stage à l'âge de 15 ans et j'ai tout de suite aimé la créativité et la liberté que permet le développement informatique. Après 4 ans à l'ETML, où j'ai obtenu un CFC en informatique et une maturité professionnelle, je suis actuellement en train de faire mon bachelor en sécurité informatique à la HEIG-VD.",
+    en: "I discovered IT on a work placement when I was 15 and I immediately loved the creativity and freedom that IT development allows. After 4 years at the ETML, from which I graduated with a CFC in computer science and a professional degree, I'm currently doing my bachelor's degree in computer security at the HEIG-VD.",
   },
   buttons: [
     {
@@ -73,7 +73,7 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
-  {
+  /*{
     title: "Tasty App",
     description:
       "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
@@ -96,7 +96,7 @@ export const projectsData = [
       icon: "white",
       projectcolor: "#70B9BE",
     },
-  }
+  }*/
 
 ] as const;
 
@@ -227,7 +227,7 @@ export const skillsDataEmbarque = [
       { title: "C++", hash: "#C++", icon: cppicon, color: "#00599C" },
       { title: "C#", hash: "#C#", icon: csharpicon, color: "#995195" },
       { title: "Python", hash: "#Python", icon: python, color: "#fccf2f" },
-      
+
     ],
   },
 ] as const;
@@ -306,29 +306,56 @@ export const quotesData = [
   },
 ] as const;
 
+export const recomendationData = {
+  title: "Recommandations",
+  title_EN: "Recomendations",
+  description: "Ce qu'on a dit de moi",
+  description_EN: "What they said about me",
+  recomendation_FR: [
+    {
+      title: "Angelica Rosso",
+      subtitle: "Directrice Recherche et Developpement",
+      description:
+        "Organisé, concencieux, ponctuel et professionnel, Monsieur Füllemann, nous a fait une bonne impression. Il s'est aquitté des tâches confiées à notre entière satisfaction.",
+      icon: solmani
+      ,
+    },
+  ],
+  recomendation_EN: [
+    {
+      title: "Angelica Rosso",
+      subtitle: "Director of Research and Development",
+      description:
+        "Organised, conscientious, punctual and professional, Mr Füllemann made a good impression on us. He carried out the tasks entrusted to him to our complete satisfaction.",
+      icon: solmani
+      ,
+    },
+  ],
+} as const;
 export const aboutMeData = {
   title: "A propos de moi",
   title_EN: "About me",
   description: "Quelque ligne sur moi",
   description_EN: "A few code snippets about me",
   paragraphs_FR: [
-    /*{
+    {
       title: "Die Schaltkreise meines Herzens",
       description:
         "Wenn ich nicht in der digitalen Welt unterwegs bin, durchstreife ich die faszinierende Welt der Technik und Hardware. Schaltkreise und Lötstellen sind für mich wie Puzzleteile eines aufregenden Abenteuers.",
-      icon: hardwareicon,
+      icon: FiCodepen
+      ,
     },
     {
       title: "Auf der Überholspur des Lebens",
       description:
         "Neben dem Coden befinde ich mich gerne auf der Überholspur – im wahrsten Sinne des Wortes. Autos sind meine Leidenschaft, und ich genieße es, mit PS-starken Maschinen auf unbekannten Straßen unterwegs zu sein.",
-      icon: caricon,
+      icon: FiCodepen,
     },
     {
       title: "Entdeckungsfreude als Lebensmotto",
       description:
         "Meine Reise als Webentwickler ist nur ein Teil meines Lebenswegs. Ich lebe nach dem Motto, dass das Abenteuer erst beginnt, wenn man das Bekannte hinter sich lässt. Das Entdecken neuer Orte ist meine Form der kreativen Inspiration.",
-      icon: travelicon,
+      icon: FiCodepen,
     },
   ],
   paragraphs_EN: [
@@ -336,20 +363,20 @@ export const aboutMeData = {
       title: "The Circuits of My Heart",
       description:
         "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: hardwareicon,
+      icon: FiCodepen,
     },
     {
       title: "On the Fast Lane of Life",
       description:
         "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
+      icon: FiCodepen,
     },
     {
       title: "The Joy of Discovery as a Life Motto",
       description:
         "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
-    },*/
+      icon: FiCodepen,
+    },
   ],
 };
 
