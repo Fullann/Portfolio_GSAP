@@ -5,6 +5,8 @@ import {
   skillsDataCMS,
   skillsDataDesign,
   skillsDataWeb,
+  skillsDataEmbarque,
+  skillsDataOther
 } from "../assets/lib/h";
 import { useTheme } from "../context/theme-context";
 import { useLanguage } from "../context/language-context";
@@ -49,19 +51,23 @@ const TechStack: React.FC = () => {
             </p>
             <h2>
               {language === "FR"
-                ? "Meine Techstack und Skills"
+                ? "Mes compétences informatiques"
                 : "My TechStack and Skills"}
             </h2>
           </motion.div>
         </div>
-        <div className="flex gap-40 justify-center max-lg:flex-col">
-          <div className="w-1/3 max-lg:w-full">
+        <div className="flex gap-40 justify-center max-lg:flex-col ">
+          <div className="flex flex-col w-1/3 max-lg:w-full space-y-10">
             <SkillSection skillsData={skillsDataWeb} theme={theme} />
+            <SkillSection skillsData={skillsDataOther} theme={theme} />
+
           </div>
-          <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
+          <div className="flex flex-col h-[inherit] justify-around space-y-8">
+            <SkillSection skillsData={skillsDataEmbarque} theme={theme} />
             <SkillSection skillsData={skillsDataDesign} theme={theme} />
             <SkillSection skillsData={skillsDataCMS} theme={theme} />
           </div>
+
         </div>
       </section>
       <ReactTooltip

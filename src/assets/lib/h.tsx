@@ -2,7 +2,37 @@
 
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import profilepicture from "../img/me.jpeg";
-
+/*WEB*/
+import htmlicon from "../icons/web/htmlicon.svg";
+import cssicon from "../icons/web/cssicon.svg";
+import javascripticon from "../icons/web/javascripticon.svg";
+import reacticon from "../icons/web/reacticon.svg";
+import typescripticon from "../icons/web/typescripticon.svg";
+import nextjsicon from "../icons/web/nextjsicon.svg";
+import nextjsiconwhite from "../icons/web/nextjsiconwhite.svg";
+import nodejsicon from "../icons/web/nodejsicon.svg";
+import tailwindcssicon from "../icons/web/tailwindicon.svg";
+import mongodbicon from "../icons/web/mongodbicon.svg";
+import vuejsicon from "../icons/web/vueicon.svg";
+import expressicon from "../icons/web/expressicon.svg";
+import expressiconwhite from "../icons/web/expressiconwhite.svg";
+import php from "../icons/web/php.svg";
+import mysql from "../icons/web/mysql.svg";
+import laravel from "../icons/web/laravel.svg";
+/*Design */
+import figmaicon from "../icons/design/figmaicon.svg";
+import canvaicon from "../icons/design/canvaicon.svg";
+/*CMS */
+import wordpressicon from "../icons/cms/wordpressicon.svg";
+import shopifyicon from "../icons/cms/shopifyicon.svg";
+/*OnBoard */
+import csharpicon from "../icons/embarque/csharp.svg";
+import cicon from "../icons/embarque/c.svg";
+import cppicon from "../icons/embarque/cpp.svg";
+import python from "../icons/embarque/python.svg";
+/*Other */
+import git from "../icons/other/git.svg";
+import docker from "../icons/other/docker.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail, FiCodepen } from "react-icons/fi";
 import Imprint from "../../components/Imprint";
@@ -49,15 +79,10 @@ export const projectsData = [
     description_EN:
       "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
     technologies: [
-      /*{ name: "Html", icon: htmlicon },
+      { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
       { name: "React", icon: reacticon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
-      { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },*/
     ],
     image: tastyMockup,
     deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
@@ -85,7 +110,7 @@ export const skillsDataWeb = [
   {
     skillsTitle: "WebDevelopment",
     skills: [
-      /*{
+      {
         title: "HTML",
         hash: "#html",
         icon: htmlicon,
@@ -152,11 +177,23 @@ export const skillsDataWeb = [
         color: ["#000000", "#FFFFFF"],
       },
       {
-        title: "SASS/SCSS",
-        hash: "#SASS/SCSS",
-        icon: sassscssicon,
-        color: "#CC6699",
-      },*/
+        title: "PHP",
+        hash: "#php",
+        icon: php,
+        color: "#777bb3",
+      },
+      {
+        title: "Mysql",
+        hash: "#Mysql",
+        icon: mysql,
+        color: "#f8971c",
+      },
+      {
+        title: "Laravel",
+        hash: "#Laravel",
+        icon: laravel,
+        color: "#ff2c1f",
+      },
     ],
   },
 ] as const;
@@ -165,9 +202,31 @@ export const skillsDataDesign = [
   {
     skillsTitle: "Design",
     skills: [
-      /*
       { title: "Figma", hash: "#Figma", icon: figmaicon, color: "#F24E1E" },
-      { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },*/
+      { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },
+    ],
+  },
+] as const;
+
+export const skillsDataOther = [
+  {
+    skillsTitle: "Other",
+    skills: [
+      { title: "Git", hash: "#git", icon: git, color: "#ed503a" },
+      { title: "Docker", hash: "#Docker", icon: docker, color: "#0096e6" },
+    ],
+  },
+] as const;
+
+export const skillsDataEmbarque = [
+  {
+    skillsTitle: "OnBoard",
+    skills: [
+      { title: "C", hash: "#C", icon: cicon, color: "#659ad3" },
+      { title: "C++", hash: "#C++", icon: cppicon, color: "#00599C" },
+      { title: "C#", hash: "#C#", icon: csharpicon, color: "#995195" },
+      { title: "Python", hash: "#Python", icon: python, color: "#fccf2f" },
+      
     ],
   },
 ] as const;
@@ -176,7 +235,7 @@ export const skillsDataCMS = [
   {
     skillsTitle: "CMS",
     skills: [
-      /*{
+      {
         title: "WordPress",
         hash: "#WordPress",
         icon: wordpressicon,
@@ -187,7 +246,7 @@ export const skillsDataCMS = [
         hash: "#Shopify",
         icon: shopifyicon,
         color: "#7AB55C",
-      },*/
+      },
     ],
   },
 ] as const;
@@ -240,7 +299,7 @@ export const quotesData = [
     author: "Steve Jobs",
   },
   {
-    fr: '"Das Web ist wie eine Leinwand und der Code ist die Farbe. Erschaffe dein Meisterwerk."',
+    fr: `"Le web est comme une toile et le code est la peinture. Crée ton chef-d'œuvre."`,
     en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
   },
 ] as const;
