@@ -15,6 +15,7 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/imprint" element={<Home />}></Route>
                 <Route path="/privacy" element={<Home />}></Route>
+                <Route path="/CV" element={<Home />}></Route>
                 <Route path=":catchAll(.*)" element={<Home />}></Route>
               </Routes>
             </ActiveSectionContextProvider>

@@ -37,6 +37,7 @@ import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail, FiCodepen } from "react-icons/fi";
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
+import CV from "../../components/CV";
 
 export const headerIntroData = {
   title: {
@@ -262,6 +263,7 @@ export const navLinks = [
 export const FooterLinks = [
   { fr: "Imprint", en: "Imprint", hash: "#imprint", data: <Imprint /> },
   { fr: "Privacy", en: "Privacy", hash: "#privacy", data: <Privacy /> },
+  { fr: "CV", en: "CV", hash: "#CV", data: <CV /> },
 ] as const;
 
 export const sideBarRightMail = {
