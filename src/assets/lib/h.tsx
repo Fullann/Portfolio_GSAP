@@ -32,6 +32,11 @@ import git from "../icons/other/git.svg";
 import docker from "../icons/other/docker.svg";
 /* WorkAT */
 import solmani from "../icons/workat/solmani_logo.png"
+/* About */
+import code_icon from "../icons/about/code.svg"
+import music_icon from "../icons/about/music.svg"
+import sport_icon from "../icons/about/sports.svg"
+import beer_icon from "../icons/about/beer.svg"
 
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail, FiCodepen } from "react-icons/fi";
@@ -339,43 +344,56 @@ export const aboutMeData = {
   description_EN: "A few code snippets about me",
   paragraphs_FR: [
     {
-      title: "Die Schaltkreise meines Herzens",
+      title: "Apprendre, c'est ma passion",
       description:
-        "Wenn ich nicht in der digitalen Welt unterwegs bin, durchstreife ich die faszinierende Welt der Technik und Hardware. Schaltkreise und Lötstellen sind für mich wie Puzzleteile eines aufregenden Abenteuers.",
-      icon: FiCodepen
+        "J'aime apprendre de nouvelle chose c'est donc pour ça que je me suis créer un petit serveur chez moi sous Openmediavault et vps pour héberger mes projets en ligne.",
+      icon: code_icon
       ,
     },
     {
-      title: "Auf der Überholspur des Lebens",
+      title: "Entre amis",
       description:
-        "Neben dem Coden befinde ich mich gerne auf der Überholspur – im wahrsten Sinne des Wortes. Autos sind meine Leidenschaft, und ich genieße es, mit PS-starken Maschinen auf unbekannten Straßen unterwegs zu sein.",
-      icon: FiCodepen,
+        "En dehors du code, j'aime passer du temps avec ma famille et mes amis. Cela peut pour jouer a des jeux ensemble ou simplement boire un verre.",
+      icon: beer_icon,
     },
     {
-      title: "Entdeckungsfreude als Lebensmotto",
+      title: "Ce qui me fait vibrer",
       description:
-        "Meine Reise als Webentwickler ist nur ein Teil meines Lebenswegs. Ich lebe nach dem Motto, dass das Abenteuer erst beginnt, wenn man das Bekannte hinter sich lässt. Das Entdecken neuer Orte ist meine Form der kreativen Inspiration.",
-      icon: FiCodepen,
+        "J'ai toujours fait de la musique. J'ai commencer avec la clarinette puis le piano pendant le confinement et en 2024 j'ai commencer la guitare.",
+      icon: music_icon,
+    },
+    {
+      title: "Le sport, une autre passion",
+      description:
+        "Pratiquer du sport est aussi une de mes passions, j'ai toujours été actif dans le club de gym de mon village en tant qu'élève jusqu'à 19 ans et moniteur depuis mes 17 ans.",
+      icon: sport_icon,
     },
   ],
   paragraphs_EN: [
     {
-      title: "The Circuits of My Heart",
+      title: "Learning is my passion",
       description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: FiCodepen,
+        "I love learning new things, so that's why I've set up a small server at home using Openmediavault and vps to host my online projects.",
+      icon: code_icon
+      ,
     },
     {
-      title: "On the Fast Lane of Life",
+      title: "With friends",
       description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: FiCodepen,
+        "Outside the code, I like to spend time with my family and friends. This can be playing games together or just having a drink.",
+      icon: beer_icon,
     },
     {
-      title: "The Joy of Discovery as a Life Motto",
+      title: "What thrills me",
       description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: FiCodepen,
+        "I've always played music. I started with the clarinet, then the piano during my confinement and in 2024 I took up the guitar.",
+      icon: music_icon,
+    },
+    {
+      title: "Sport, another passion",
+      description:
+        "Sport is also one of my passions, and I've always been active in my village gym as a pupil until I was 19 and as an instructor since I was 17.",
+      icon: sport_icon,
     },
   ],
 };
@@ -393,12 +411,12 @@ export const contactData = {
     {
       name: "name",
       placeholder: {
-        fr: "Dein Name",
+        fr: "Votre nom",
         en: "Your Name",
       },
       type: "text",
       validation: {
-        fr: "Bitte gebe deinen Namen ein",
+        fr: "Remplissez votre nom",
         en: "Please fill in your name",
       },
       pattern: "{2}",
@@ -406,12 +424,12 @@ export const contactData = {
     {
       name: "email",
       placeholder: {
-        fr: "Deine E-Mail Adresse",
+        fr: "Votre adresse e-mail",
         en: "Your E-Mail",
       },
       type: "email",
       validation: {
-        fr: "Bitte gebe deine Email ein",
+        fr: "Remplissez votre adresse e-mail",
         en: "Please fill in your email",
       },
       pattern: "[@]{4}",
@@ -419,12 +437,12 @@ export const contactData = {
     {
       name: "subject",
       placeholder: {
-        fr: "Deine Betreff",
+        fr: "Le sujet de votre message",
         en: "Your Subject",
       },
       type: "text",
       validation: {
-        fr: "Bitte gebe einen Betreff ein",
+        fr: "Remplissez le sujet de votre message",
         en: "Please fill in your subject",
       },
       pattern: "{10}",
@@ -432,20 +450,20 @@ export const contactData = {
   ],
   textarea: {
     placeholder: {
-      fr: "Deine Nachricht",
+      fr: "Votre message",
       en: "Your Message",
     },
     name: "message",
     rows: 10,
     validation: {
-      fr: "Bitte gebe deine Nachricht ein",
+      fr: "Remplissez votre message s'il vous plaît",
       en: "Please fill in your message",
     },
     pattern: "{10}",
   },
   button: {
     value: {
-      fr: "Absenden",
+      fr: "Envoyer",
       en: "Send",
     },
   },
@@ -458,11 +476,11 @@ export const contactData = {
   },
   privacyOptIn: {
     checkbox: {
-      fr: "Ich stimme zu, dass Alpay meine personenbezogenen Daten (Name und E-Mail-Adresse) verwenden darf, um mit mir Kontakt aufzunehmen.",
-      en: "I agree that Alpay may use my personal data (name and e-mail address) to contact me.",
+      fr: "J'accepte que Nathan utilise mes données personnelles (nom et e-mail) pour me contacter.",
+      en: "I agree that Nathan may use my personal data (name and e-mail address) to contact me.",
     },
     description: {
-      fr: "Durch Übermittlung dieser Anfrage bestätigen Sie, dass Sie die Datenschutzerklärung gelesen haben",
+      fr: "En soumettant cette demande, vous reconnaissez avoir pris connaissance de la politique privée.",
       en: "By submitting this request, you acknowledge that you have read the Private Policy",
     },
   },
@@ -470,19 +488,19 @@ export const contactData = {
 
 export const toastMessages = {
   loadingProject: {
-    fr: "🦄 Die Live Demo wird gleich geöffnet. Server werden gestartet...",
+    fr: "🦄 La démo en direct va s'ouvrir. Les serveurs sont lancés...",
     en: "🦄 The live demo will open shortly. Starting servers...",
   },
   successEmailSent: {
-    fr: "🦄 Vielen Dank für deine Email. Ich werde mich schnellstmöglich bei dir melden",
+    fr: "🦄 Merci beaucoup pour ton e-mail. Je te contacterai dès que possible",
     en: "🦄 Thank you for your email. I will get back to you as soon as possible",
   },
   failedEmailSent: {
-    fr: "🦄 Leider hat der Versand deiner Email nicht geklappt. Bitte versuche es später noch einmal",
+    fr: "🦄 Malheureusement, l'envoi de votre courriel n'a pas fonctionné. Veuillez réessayer plus tard",
     en: "🦄 Unfortunately the sending of your email did not work. Please try again later",
   },
   failedValidationName: {
-    fr: "Bitte gebe deinen Namen ein",
+    fr: "s'il vous plaît remplissez votre nom",
     en: "Please fill in your name",
   },
 } as const;
