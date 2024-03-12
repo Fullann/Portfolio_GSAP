@@ -127,8 +127,8 @@ input:focus {
 textarea:hover,
 input:hover {
   outline: 0;
-  box-shadow: rgba(240, 101, 46, 0.4) 5px 5px, rgba(240, 133, 46, 0.3) 10px 10px,
-    rgba(240, 149, 46, 0.2) 15px 15px;
+  box-shadow: rgba(153, 50, 204, 0.4) 5px 5px, rgba(153, 50, 204, 0.3) 10px 10px,
+    rgba(153, 50, 204, 0.2) 15px 15px;
   transform: translate(-0.9rem, -0.9rem);
 } 
 

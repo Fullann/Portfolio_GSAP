@@ -126,7 +126,7 @@ export default function LiveTicker() {
   const { language } = useLanguage();
   return (
     <>
-      <div className="bg-[--lightblue] h-[4.8vh] -rotate-3 flex justify-center items-center scale-110 relative z-[1] w-full min-[1921px]:h-[3.3vh]">
+      <div className="bg-violet-300 h-[4.8vh] -rotate-3 flex justify-center items-center scale-110 relative z-[1] w-full min-[1921px]:h-[3.3vh]">
         <ParallaxText baseVelocity={-2}>
           <Link
             to={sideBarLeftSocials[1].link}

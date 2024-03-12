@@ -96,13 +96,11 @@ const NavBar: React.FC = () => {
       <ScrollToAnchor />
       {!isMobileMenuActive && (
         <nav
-          className={`max-lg:hidden flex-row flex justify-center items-center gap-24 font-semibold p-5 top-0 ${
-            isSticky && !isMobileMenuActive
-              ? `sticky top-10 z-50 ml-auto mr-auto  w-max  px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40  bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
-                  theme === "dark" ? "bg-darkblue" : "bg-white"
-                }`
+          className={`max-lg:hidden flex-row flex justify-center items-center gap-24 font-semibold p-5 top-0 ${isSticky && !isMobileMenuActive
+              ? `sticky top-10 z-50 ml-auto mr-auto  w-max  px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40  bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${theme === "dark" ? "bg-darkblue" : "bg-white"
+              }`
               : ""
-          }
+            }
    `}
         >
           {navLinks.map((link, index) => (
@@ -113,7 +111,6 @@ const NavBar: React.FC = () => {
                     &lt;
                   </span>
                   {language === "FR" ? link.fr : link.en}
-                  {/* {link.de.toLocaleUpperCase()} */}
                 </div>
               ) : (
                 <div
@@ -123,8 +120,6 @@ const NavBar: React.FC = () => {
                   }}
                 >
                   {language === "FR" ? link.fr : link.en}
-
-                  {/* {link.de.toLocaleUpperCase()} */}
                 </div>
               )}
             </CustomNavLink>
@@ -134,9 +129,8 @@ const NavBar: React.FC = () => {
       )}
       {isMobileMenuActive && (
         <nav
-          className={` max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10  text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${
-            theme === "dark" ? "bg-darkblue" : "bg-white"
-          }`}
+          className={` max-lg:flex w-[100vw] flex-row justify-between fixed bottom-0 left-0 z-50 bg-darkblue p-10  text-center items-center transition-all ease-in-out duration-100 rounded-t-3xl bg-opacity-100 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${theme === "dark" ? "bg-darkblue" : "bg-white"
+            }`}
         >
           {navLinks.map((link, mobileIndex) => (
             <CustomNavLink key={mobileIndex} link={link.hash} linkEn={link.en}>

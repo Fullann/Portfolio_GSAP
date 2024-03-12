@@ -78,7 +78,7 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
-  /*{
+  {
     title: "Tasty App",
     description:
       "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
@@ -90,9 +90,9 @@ export const projectsData = [
       { name: "JavaScript", icon: javascripticon },
       { name: "React", icon: reacticon },
     ],
-    image: tastyMockup,
+    image: "asd",
     deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/AlpayC/Frontend_Abschlussprojekt_Tasty",
+    githuburl: "https://github.com//Frontend_Abschlussprojekt_Tasty",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -101,7 +101,7 @@ export const projectsData = [
       icon: "white",
       projectcolor: "#70B9BE",
     },
-  }*/
+  }
 
 ] as const;
 
@@ -404,7 +404,7 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    fr: "Schreib mir eine Nachricht und ich melde mich bei dir.",
+    fr: "Ecrivez-moi un message et je vous répondrai au plus vite",
     en: "Write me a message and I will get back to you.",
   },
   inputfields: [
@@ -487,6 +487,10 @@ export const contactData = {
 } as const;
 
 export const toastMessages = {
+  notCaptcha: {
+    fr: "🦄 Veuillez cocher la case 'Je ne suis pas un robot'",
+    en: "🦄 Please check the 'I'm not a robot' box",
+  },
   loadingProject: {
     fr: "🦄 La démo en direct va s'ouvrir. Les serveurs sont lancés...",
     en: "🦄 The live demo will open shortly. Starting servers...",

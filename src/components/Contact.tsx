@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
-import axios from "axios";
+import emailjs from '@emailjs/browser';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/h.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
@@ -11,7 +12,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
+  const REACT_APP_HCAPTCHA = import.meta.env.VITE_APP_HCAPTCHA || "";
+
+  const VITE_APP_MAIL_SERVICE = import.meta.env.VITE_APP_MAIL_SERVICE || "";
+  const VITE_APP_MAIL_TEMPLATE = import.meta.env.VITE_APP_MAIL_TEMPLATE || "";
+  const VITE_APP_MAIL_PUBLIC_KEY = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY || "";
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -31,31 +36,42 @@ const Contact: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  let check = false;
+  const onToken = () => {
+    check = true;
+  };
 
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
     setError(null);
     console.log(error);
 
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-
-    try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
+    if (!check) {
       if (language === "FR") {
-        toast.success(toastMessages.successEmailSent.fr);
+        toast.error(toastMessages.notCaptcha.fr);
       } else {
-        toast.success(toastMessages.successEmailSent.en);
+        toast.error(toastMessages.notCaptcha.en);
       }
-    } catch (error) {
-      console.log(error);
-      if (language === "FR") {
-        toast.error(toastMessages.failedEmailSent.fr);
-      } else {
-        toast.error(toastMessages.failedEmailSent.en);
-      }
-      setError("An Error occured, try again later");
+    } else {
+      emailjs.sendForm(VITE_APP_MAIL_SERVICE, VITE_APP_MAIL_TEMPLATE, e.target, VITE_APP_MAIL_PUBLIC_KEY)
+        .then((result) => {
+          console.log(result.text);
+          if (language === "FR") {
+            toast.success(toastMessages.successEmailSent.fr);
+          } else {
+            toast.success(toastMessages.successEmailSent.en);
+          }
+        }, (error) => {
+          console.log(error.text);
+          if (language === "FR") {
+            toast.error(toastMessages.failedEmailSent.fr);
+          } else {
+            toast.error(toastMessages.failedEmailSent.en);
+          }
+          setError("An Error occured, try again later");
+        });
     }
+
   };
 
   const handleInputFocus = (fieldName: string) => {
@@ -125,51 +141,20 @@ import  { useState } from "react";
 // 🌈 Spreading Stardust: 
 // Crafting Cosmic Email 🌌
 
-const [sender, setSender] = "${name}${
-    lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
-  }🚀";
-const [recipient, setRecipient] = "${email}${
-    lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
-  }📧";
-const [subject, setSubject] = \n"${subject}${
-    lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
+const [sender, setSender] = \n"${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
+    }🚀";
+const [recipient, setRecipient] = \n"${email}${lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
+    }📧";
+const [subject, setSubject] = \n"${subject}${lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
+    }✨";
 const [message, setMessage] = 
 \`Hello, intrepid traveler! 👋\n
 Across the cosmos, a message for you:\n
-"${wordWrap(message, 40, " ")}${
-    lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
+"${wordWrap(message, 40, " ")}${lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
+    }"\n
 Wishing you stardust dreams,\n
 ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 \``;
-
-  //   const codeSnippet2 = `
-  // // 🚀 Initiating Quantum Email Transmission 🪐
-  // const launchEmail = async () => {
-  //   try {
-  //     const response = await fetch('https://alpaycelik.dev/send',{
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: JSON.stringify({
-  //      sender,
-  //      recipient,
-  //      subject,
-  //      message
-  //     })
-  //    });
-
-  //    if (response.ok) {
-  //    console.log('🌌 Transmission successful!');
-  //    } else {
-  //    console.error('🌠 Cosmic glitch encountered...');
-  //    }
-  //   } catch (error) {
-  //   console.error('🌪 Quantum disturbance detected:', error);
-  //   }
-  // };
-  // // 🚀 Ready for Liftoff? 🛸
-  // launchEmail();`;
 
   return (
     <React.Fragment>
@@ -241,10 +226,10 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                   input.name === "name"
                     ? name
                     : input.name === "email"
-                    ? email
-                    : input.name === "subject"
-                    ? subject
-                    : message
+                      ? email
+                      : input.name === "subject"
+                        ? subject
+                        : message
                 }
                 required
                 onFocus={() => {
@@ -256,11 +241,10 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                   setLastUpdatedField(input.name);
                 }}
                 onChange={handleInputChange}
-                className={`${
-                  theme === "dark"
-                    ? "bg-[--blackblue] dark-mode-shadow "
-                    : "bg-[--icewhite] dark-shadow "
-                }`}
+                className={`${theme === "dark"
+                  ? "bg-[--blackblue] dark-mode-shadow "
+                  : "bg-[--icewhite] dark-shadow "
+                  }`}
               />
             ))}
             <textarea
@@ -280,48 +264,41 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 setLastUpdatedField(contactData.textarea.name);
               }}
               onChange={handleInputChange}
-              className={`${
-                theme === "dark"
-                  ? "bg-[--blackblue] dark-mode-shadow"
-                  : "bg-[--icewhite] dark-shadow"
-              }`}
+              className={`${theme === "dark"
+                ? "bg-[--blackblue] dark-mode-shadow"
+                : "bg-[--icewhite] dark-shadow"
+                }`}
             />
-            <div className="privacy-checkbox flex gap-16">
-              <label
-                className="block w-2 h-2 cursor-pointer"
-                htmlFor="checkbox-label"
-              >
-                <input
-                  type="checkbox"
-                  required
-                  name="checkbox-label"
-                  id="checkbox-label"
-                />
-                <span className="checkbox"></span>
-              </label>
-              <p>
-                {language === "FR"
-                  ? `${contactData.privacyOptIn.checkbox.fr}`
-                  : `${contactData.privacyOptIn.checkbox.en}`}
-              </p>
+
+            <div className="flex justify-around w-full">
+              <HCaptcha
+                sitekey={REACT_APP_HCAPTCHA}
+                onVerify={onToken}
+                onExpire={() => onToken()}
+                onError={(err) => {
+                  onToken();
+
+                  console.error(err);
+                }}
+              />
+              <Button
+                value={
+                  language === "FR"
+                    ? `${contactData.button.value.fr}`
+                    : `${contactData.button.value.en}`
+                }
+                iconSVG={contactData.icon}
+                buttoncolor={contactData.colors.main}
+                iconcolor={contactData.colors.icon}
+                type="submit"
+                elementType="input"
+              />
             </div>
             <p>
               {language === "FR"
                 ? `${contactData.privacyOptIn.description.fr}`
                 : `${contactData.privacyOptIn.description.en}`}
             </p>
-            <Button
-              value={
-                language === "FR"
-                  ? `${contactData.button.value.fr}`
-                  : `${contactData.button.value.en}`
-              }
-              iconSVG={contactData.icon}
-              buttoncolor={contactData.colors.main}
-              iconcolor={contactData.colors.icon}
-              type="submit"
-              elementType="input"
-            />
             <ToastContainer
               className="w-max text-3xl block p-3 max-lg:w-full "
               position="bottom-center"
