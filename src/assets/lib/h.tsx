@@ -37,6 +37,11 @@ import code_icon from "../icons/about/code.svg"
 import music_icon from "../icons/about/music.svg"
 import sport_icon from "../icons/about/sports.svg"
 import beer_icon from "../icons/about/beer.svg"
+/* IMG projects  */
+import jali_site from "../img/projects/jali-site.png"
+import ytdownloader from "../img/projects/ytdowloader.png"
+import vufflens_la_gym from "../img/projects/vufflens-la-gym.ch.png"
+import art_bleu from "../img/projects/art-bleu.ch.png"
 
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail, FiCodepen } from "react-icons/fi";
@@ -79,20 +84,84 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "JALI admin site",
     description:
-      "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
+      "Jali Admin site est un site web fait pour communiquer via une API Rest qui est connecté à une base de donnée MongoDB. Ce site administre un bot discord qui permet de faire des commandes pour le serveur discord tels que Mee6.",
     description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "Jali Admin site is a website made to communicate via a Rest API which is connected to a MongoDB database. This site administers a discord bot that allows you to make commands for the discord server such as Mee6.",
     technologies: [
       { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
+      { name: "Tailwind", icon: tailwindcssicon },
+      { name: "VueJS", icon: vuejsicon },
+      { name: "MongoDB", icon: mongodbicon },
+    ],
+    image: jali_site,
+    deploymenturl: "",
+    githuburl: "https://github.com/Fullann/JALI-SITE",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  }, {
+    title: "Youtube Downloader",
+    description:
+      "Ce site web est un downloader de vidéo youtube. Il est fait avec React et utilise une API Rest pour télécharger les vidéos.",
+    description_EN:
+      "This website is a youtube video downloader. It is made with React and uses a Rest API to download the videos.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "Tailwind", icon: tailwindcssicon },
       { name: "React", icon: reacticon },
     ],
-    image: "asd",
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com//Frontend_Abschlussprojekt_Tasty",
+    image: ytdownloader,
+    deploymenturl: "",
+    githuburl: "https://github.com/Fullann/YoutubeDownloader",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  }, {
+    title: "Vufflens-la-Gym",
+    description:
+      "Site web pour le club de gym de Vufflens-la-Ville. Il est fait avec WordPress et utilise un thème personnalisé.",
+    description_EN:
+      "Website for the gym club of Vufflens-la-Ville. It is made with WordPress and uses a custom theme.",
+    technologies: [
+      { name: "Wordpress", icon: wordpressicon },
+    ],
+    image: vufflens_la_gym,
+    deploymenturl: "https://vufflens-la-gym.ch/",
+    githuburl: "",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  }, {
+    title: "Art-Bleu",
+    description:
+      "Ce site web a été fait pour un client qui voulait un site pour son atelier d'art-thérapie à l'espace chamarel à Vufflens-la-Ville. Il est fait avec WordPress et utilise un thème personnalisé.",
+    description_EN:
+      "This website was made for a client who wanted a website for his art therapy workshop at the chamarel space in Vufflens-la-Ville. It is made with WordPress and uses a custom theme.",
+    technologies: [
+      { name: "Wordpress", icon: wordpressicon },
+    ],
+    image: art_bleu,
+    deploymenturl: "https://art-bleu.ch/",
+    githuburl: "",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -107,7 +176,7 @@ export const projectsData = [
 
 export const liveTickerData = {
   content: {
-    fr: "D'autre projets sur Github",
+    fr: "D'autres projets sur Github",
     en: "More Projects on Github",
   },
 } as const;
@@ -475,10 +544,6 @@ export const contactData = {
     icon: "white",
   },
   privacyOptIn: {
-    checkbox: {
-      fr: "J'accepte que Nathan utilise mes données personnelles (nom et e-mail) pour me contacter.",
-      en: "I agree that Nathan may use my personal data (name and e-mail address) to contact me.",
-    },
     description: {
       fr: "En soumettant cette demande, vous reconnaissez avoir pris connaissance de la politique privée.",
       en: "By submitting this request, you acknowledge that you have read the Private Policy",
@@ -488,20 +553,20 @@ export const contactData = {
 
 export const toastMessages = {
   notCaptcha: {
-    fr: "🦄 Veuillez cocher la case 'Je ne suis pas un robot'",
-    en: "🦄 Please check the 'I'm not a robot' box",
+    fr: "👾 Veuillez cocher la case 'Je ne suis pas un robot'",
+    en: "👾 Please check the 'I'm not a robot' box",
   },
   loadingProject: {
-    fr: "🦄 La démo en direct va s'ouvrir. Les serveurs sont lancés...",
-    en: "🦄 The live demo will open shortly. Starting servers...",
+    fr: "👾 La démo en direct va s'ouvrir. Les serveurs sont lancés...",
+    en: "👾 The live demo will open shortly. Starting servers...",
   },
   successEmailSent: {
-    fr: "🦄 Merci beaucoup pour ton e-mail. Je te contacterai dès que possible",
-    en: "🦄 Thank you for your email. I will get back to you as soon as possible",
+    fr: "👾 Merci beaucoup pour ton e-mail. Je te contacterai dès que possible",
+    en: "👾 Thank you for your email. I will get back to you as soon as possible",
   },
   failedEmailSent: {
-    fr: "🦄 Malheureusement, l'envoi de votre courriel n'a pas fonctionné. Veuillez réessayer plus tard",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later",
+    fr: "👾 Malheureusement, l'envoi de votre courriel n'a pas fonctionné. Veuillez réessayer plus tard",
+    en: "👾 Unfortunately the sending of your email did not work. Please try again later",
   },
   failedValidationName: {
     fr: "s'il vous plaît remplissez votre nom",

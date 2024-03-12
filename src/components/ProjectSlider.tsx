@@ -110,7 +110,7 @@ const ProjectSlider: React.FC = () => {
                     </p>
                     <div className="technologies">
                       <h3>
-                        {language === "FR" ? "Technologien" : "Technologies"}
+                        {language === "FR" ? "Technologies" : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -128,21 +128,27 @@ const ProjectSlider: React.FC = () => {
                       </div>
                     </div>
                     <div className="buttons flex gap-10">
-                      <Button
-                        label="Live Demo"
-                        link={project.deploymenturl}
-                        iconSVG={project.deploymenticon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
-                      />
-                      <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                      />
+
+                      {project.deploymenturl !== "" && (
+                        <Button
+                          label="Live Demo"
+                          link={project.deploymenturl}
+                          iconSVG={project.deploymenticon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          onClick={notifyServerRequest}
+                        />
+                      )}
+                      {project.githuburl !== "" && (
+                         <Button
+                         label="Github Repository"
+                         link={project.githuburl}
+                         iconSVG={project.githubicon}
+                         buttoncolor={project.colors.main}
+                         iconcolor={project.colors.icon}
+                       />
+                      )}
+                     
                     </div>
                   </div>
 
