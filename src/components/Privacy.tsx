@@ -9,11 +9,13 @@ const Privacy = () => {
     <React.Fragment>
       {language === "FR" ? (
         <article className="flex flex-col gap-6 max-w-[70vw] break-words">
-          <h1>Datenschutz&shy;erkl&auml;rung</h1>
+          <h1>Police de confidentialiter</h1>
+          <p>щ（ﾟДﾟщ）</p>
         </article>
       ) : (
         <article className="flex flex-col gap-6 max-w-[70vw] break-words">
           <h1>Privacy Policy</h1>
+          <p>щ（ﾟДﾟщ）</p>
         </article>
       )}
     </React.Fragment>

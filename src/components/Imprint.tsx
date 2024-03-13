@@ -1,6 +1,5 @@
 import React from "react";
 import { useLanguage } from "../context/language-context";
-// import { Link } from "react-router-dom";
 
 const Imprint = () => {
   const { language } = useLanguage();
@@ -9,11 +8,13 @@ const Imprint = () => {
     <React.Fragment>
       {language === "FR" ? (
         <article className="flex flex-col gap-6 max-w-[70vw]">
-          <h1>Impressum</h1>
+          <h1>Notice du site </h1>
+          <p>ヽ(´▽`)/ ヽ(´▽`)/</p>
         </article>
       ) : (
         <article className="flex flex-col gap-6 max-w-[70vw]">
           <h1>Site Notice</h1>
+          <p>ヽ(´▽`)/ ヽ(´▽`)/</p>
         </article>
       )}
     </React.Fragment>
