@@ -21,7 +21,7 @@ const ProjectSlider: React.FC = () => {
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
-    offset: ["1 1", "1.3 1"],
+    offset: ["1 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);

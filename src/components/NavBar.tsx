@@ -80,7 +80,6 @@ const NavBar: React.FC = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={`relative ${linkClasses}`}
-        aria-aria-current={link}
       >
         <span>
           {leftArrow}
@@ -97,9 +96,9 @@ const NavBar: React.FC = () => {
       {!isMobileMenuActive && (
         <nav
           className={`max-lg:hidden flex-row flex justify-center items-center gap-24 font-semibold p-5 top-0 ${isSticky && !isMobileMenuActive
-              ? `sticky top-10 z-50 ml-auto mr-auto  w-max  px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40  bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${theme === "dark" ? "bg-darkblue" : "bg-white"
-              }`
-              : ""
+            ? `sticky top-10 z-50 ml-auto mr-auto  w-max  px-16 py-5 transition-all ease-in-out duration-100 rounded-full border border-white border-opacity-40  bg-opacity-70 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] ${theme === "dark" ? "bg-darkblue" : "bg-white"
+            }`
+            : ""
             }
    `}
         >

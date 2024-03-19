@@ -28,10 +28,7 @@ const TechStack: React.FC = () => {
   return (
     <React.Fragment>
       <section
-        className="relative tech-stack max-lg:p-16 "
-        id="skills"
-        ref={ref}
-      >
+        className="relative tech-stack max-lg:p-16" id="skills" ref={ref}>
         <RadialGradient
           scale="scale-y-[3]"
           opacity={theme === "light" ? "opacity-30" : "opacity-30"}

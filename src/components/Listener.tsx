@@ -6,10 +6,10 @@ const ScrollToAnchor: React.FC = () => {
   const lastHash = useRef<string>("");
 
   useEffect(() => {
+    console.log("ScrollToAnchor", location);
     if (location.hash) {
       lastHash.current = location.hash.slice(1);
     }
-
     if (lastHash.current && document.getElementById(lastHash.current)) {
       setTimeout(() => {
         const element = document.getElementById(lastHash.current);
