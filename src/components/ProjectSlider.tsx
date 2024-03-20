@@ -4,7 +4,7 @@ import Button from "./Button";
 import LiveTicker from "./ParallaxText";
 import { projectsData, toastMessages } from "../assets/lib/h";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCards, Pagination } from "swiper/modules";
+import { Autoplay, EffectCards, Pagination,Navigation } from "swiper/modules";
 import { ToastContainer, toast } from "react-toastify";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Projects");
@@ -83,7 +84,7 @@ const ProjectSlider: React.FC = () => {
             <Swiper
               effect={"cards"}
               grabCursor={true}
-              modules={[EffectCards, Autoplay, Pagination]}
+              modules={[EffectCards, Autoplay, Pagination, Navigation]}
               className=" w-[60vw] max-lg:hidden min-[1921px]:px-96"
               loop={true}
               autoplay={{
@@ -93,6 +94,10 @@ const ProjectSlider: React.FC = () => {
               }}
               pagination={{
                 clickable: true,
+              }}
+              navigation={{
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
               }}
             >
               {projectsData.map((project, index: number) => (

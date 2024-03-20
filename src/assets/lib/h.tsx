@@ -32,6 +32,7 @@ import git from "../icons/other/git.svg";
 import docker from "../icons/other/docker.svg";
 /* WorkAT */
 import solmani from "../icons/workat/solmani_logo.png"
+import art_bleu_icon from "../icons/workat/LOGO_ART_BLEU_V2_FINAL.png"
 /* About */
 import code_icon from "../icons/about/code.svg"
 import music_icon from "../icons/about/music.svg"
@@ -394,6 +395,14 @@ export const recomendationData = {
       icon: solmani
       ,
     },
+    {
+      title: "Shashi Lasserre-Gobin",
+      subtitle: "Art-thérapeute",
+      description:
+        "Les compétences professionnelles de Nathan m'ont beaucoup aidé à construire mon site. Sa clarté et sa patience de m'expliquer ses idées étaient constructives. De plus, il a su être à l'écoute de mes différentes demandes et trouver des solutions rapides pour y remédier. Merci Nathan pour ce beau travail et je le recommande vivement à toutes personnes souhaitant faire appel à ses services. ",
+      icon: art_bleu_icon
+      ,
+    },
   ],
   recomendation_EN: [
     {
@@ -402,6 +411,14 @@ export const recomendationData = {
       description:
         "Organised, conscientious, punctual and professional, Mr Füllemann made a good impression on us. He carried out the tasks entrusted to him to our complete satisfaction.",
       icon: solmani
+      ,
+    },
+    {
+      title: "Shashi Lasserre-Gobin",
+      subtitle: "Art therapist",
+      description:
+        "Nathan's professional skills really helped me build my site. His clarity and patience in explaining his ideas to me were constructive. What's more, he was able to listen to my various requests and find quick solutions to remedy them. Thank you Nathan for a job well done and I would highly recommend him to anyone wishing to use his services. ",
+      icon: art_bleu_icon
       ,
     },
   ],
