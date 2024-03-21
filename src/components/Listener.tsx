@@ -6,7 +6,6 @@ const ScrollToAnchor: React.FC = () => {
   const lastHash = useRef<string>("");
 
   useEffect(() => {
-    console.log("ScrollToAnchor", location);
     if (location.hash) {
       lastHash.current = location.hash.slice(1);
     }

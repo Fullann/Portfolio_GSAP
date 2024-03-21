@@ -8,13 +8,19 @@ const Imprint = () => {
     <React.Fragment>
       {language === "FR" ? (
         <article className="flex flex-col gap-6 max-w-[70vw]">
-          <h1>Notice du site </h1>
-          <p>ヽ(´▽`)/ ヽ(´▽`)/</p>
+          <h1>Mentions Légales</h1>
+          <p>Fullann.ch</p>
+          <p>Lausanne 1004 Suisse</p>
+          <p>Email : nathan@fullann.ch</p>
+          <p>Responsable du contenu selon § 55 Abs. 2 RStV : [Votre nom]</p>
         </article>
       ) : (
         <article className="flex flex-col gap-6 max-w-[70vw]">
-          <h1>Site Notice</h1>
-          <p>ヽ(´▽`)/ ヽ(´▽`)/</p>
+          <h1>Imprint</h1>
+          <p>Fullann.ch</p>
+          <p>Lausanne 1004 Suisse</p>
+          <p>Email: nathan@fullann.ch</p>
+          <p>Responsible for the content according to § 55 Abs. 2 RStV: [Your Name]</p>
         </article>
       )}
     </React.Fragment>
