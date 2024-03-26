@@ -10,7 +10,7 @@ const Privacy = () => {
       {language === "FR" ? (
         <article className="flex flex-col gap-6 max-w-[70vw] break-words">
           <h1>Politique de Confidentialité</h1>
-          <p>La confidentialité de nos visiteurs est extrêmement importante pour nous. Ce document de politique de confidentialité décrit les types d'informations personnelles reçues et collectées par [votre site web] et comment elles sont utilisées.</p>
+          <p>La confidentialité de nos visiteurs est extrêmement importante pour nous. Ce document de politique de confidentialité décrit les types d'informations personnelles reçues et collectées par fullann.ch et comment elles sont utilisées.</p>
 
           <h2>Collecte de l'Information et Utilisation</h2>
           <p>Nous ne collectons que les informations personnelles que vous nous fournissez volontairement, telles que votre nom, votre adresse e-mail et d'autres informations de contact, lorsque vous nous contactez via notre formulaire de contact ou d'autres moyens de communication. Ces informations ne seront utilisées que dans le but spécifique de répondre à votre demande ou de vous fournir les services demandés.</p>
@@ -36,7 +36,7 @@ const Privacy = () => {
       ) : (
         <article className="flex flex-col gap-6 max-w-[70vw] break-words">
           <h1>Privacy Policy</h1>
-          <p>The privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information received and collected by [your website] and how it is used.</p>
+          <p>The privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information received and collected by fullann.ch and how it is used.</p>
 
           <h2>Information Collection and Use</h2>
           <p>We only collect personal information that you voluntarily provide to us, such as your name, email address, and other contact information, when you contact us via our contact form or other means of communication. This information will only be used for the specific purpose of responding to your inquiry or providing the requested services.</p>

@@ -57,7 +57,7 @@ export const headerIntroData = {
   },
   subtitle: "Fullstack Developer ",
   description: {
-    fr: " J'ai découvert l'informatique lors d'un stage à l'âge de 15 ans et j'ai tout de suite aimé la créativité et la liberté que permet le développement informatique. Après 4 ans à l'ETML, où j'ai obtenu un CFC en informatique et une maturité professionnelle, je suis actuellement en train de faire mon bachelor en sécurité informatique à la HEIG-VD.",
+    fr: " J'ai découvert l'informatique lors d'un stage à l'âge de 15 ans et j'ai tout de suite aimé la créativité et la liberté que permet le développement informatique. Après 4 ans à l'ETML où j'ai obtenu un CFC en informatique et une maturité professionnelle, je suis actuellement en train de faire mon bachelor en sécurité informatique à la HEIG-VD.",
     en: "I discovered IT on a work placement when I was 15 and I immediately loved the creativity and freedom that IT development allows. After 4 years at the ETML, from which I graduated with a CFC in computer science and a professional degree, I'm currently doing my bachelor's degree in computer security at the HEIG-VD.",
   },
   buttons: [
@@ -87,7 +87,7 @@ export const projectsData = [
   {
     title: "JALI admin site",
     description:
-      "Jali Admin site est un site web fait pour communiquer via une API Rest qui est connecté à une base de donnée MongoDB. Ce site administre un bot discord qui permet de faire des commandes pour le serveur discord tels que Mee6.",
+      "Jali Admin site est un site web conçu pour communiquer via une API Rest qui est connectée à une base de donnée MongoDB. Ce site administre un bot discord qui permet de faire des commandes pour le serveur discord à l'identique de Mee6.",
     description_EN:
       "Jali Admin site is a website made to communicate via a Rest API which is connected to a MongoDB database. This site administers a discord bot that allows you to make commands for the discord server such as Mee6.",
     technologies: [
@@ -111,7 +111,7 @@ export const projectsData = [
   }, {
     title: "Youtube Downloader",
     description:
-      "Ce site web est un downloader de vidéo youtube. Il est fait avec React et utilise une API Rest pour télécharger les vidéos.",
+      "Ce site web est un downloader de vidéo youtube. Il est réalisé avec React et utilise une API Rest pour télécharger les vidéos.",
     description_EN:
       "This website is a youtube video downloader. It is made with React and uses a Rest API to download the videos.",
     technologies: [
@@ -134,7 +134,7 @@ export const projectsData = [
   }, {
     title: "Vufflens-la-Gym",
     description:
-      "Site web pour le club de gym de Vufflens-la-Ville. Il est fait avec WordPress et utilise un thème personnalisé.",
+      "Site web pour la société de gym de Vufflens-la-Ville. Il est réalisé avec WordPress et utilise un thème personnalisé.",
     description_EN:
       "Website for the gym club of Vufflens-la-Ville. It is made with WordPress and uses a custom theme.",
     technologies: [
@@ -154,7 +154,7 @@ export const projectsData = [
   }, {
     title: "Art-Bleu",
     description:
-      "Ce site web a été fait pour un client qui voulait un site pour son atelier d'art-thérapie à l'espace chamarel à Vufflens-la-Ville. Il est fait avec WordPress et utilise un thème personnalisé.",
+      "Ce site web a été réaliser pour une cliente qui souhaitait un site pour son atelier d'art-thérapie à l'Espace Chamarel à Vufflens-la-Ville. Il a été des créer avec WordPress et utilise un thème personnalisé.",
     description_EN:
       "This website was made for a client who wanted a website for his art therapy workshop at the chamarel space in Vufflens-la-Ville. It is made with WordPress and uses a custom theme.",
     technologies: [
@@ -329,7 +329,7 @@ export const skillsDataCMS = [
 
 export const navLinks = [
   { fr: "Home", en: "Home", hash: "#home", icon: GoHome },
-  { fr: "Compétence", en: "Skills", hash: "#skills", icon: GoStack },
+  { fr: "Compétences", en: "Skills", hash: "#skills", icon: GoStack },
   { fr: "Projets", en: "Projects", hash: "#projects", icon: GoProject },
   { fr: "A propos de moi", en: "About me", hash: "#about-me", icon: GoPerson },
   { fr: "Contact", en: "Contact", hash: "#contact", icon: GoMail },
@@ -399,7 +399,7 @@ export const recomendationData = {
       title: "Shashi Lasserre-Gobin",
       subtitle: "Art-thérapeute",
       description:
-        "Les compétences professionnelles de Nathan m'ont beaucoup aidé à construire mon site. Sa clarté et sa patience de m'expliquer ses idées étaient constructives. De plus, il a su être à l'écoute de mes différentes demandes et trouver des solutions rapides pour y remédier. Merci Nathan pour ce beau travail et je le recommande vivement à toutes personnes souhaitant faire appel à ses services. ",
+        "Les compétences professionnelles de Nathan m'ont beaucoup aidé à construire mon site. Sa clarté et sa patience de m'expliquer ses idées étaient constructives. De plus, il a su être à l'écoute de mes différentes demandes et a trouvé des solutions rapides pour y remédier. Merci Nathan pour ce beau travail et je le recommande vivement à toutes personnes souhaitant faire appel à ses services. ",
       icon: art_bleu_icon
       ,
     },
@@ -426,32 +426,32 @@ export const recomendationData = {
 export const aboutMeData = {
   title: "A propos de moi",
   title_EN: "About me",
-  description: "Quelque ligne sur moi",
+  description: "Quelques lignes sur moi",
   description_EN: "A few code snippets about me",
   paragraphs_FR: [
     {
       title: "Apprendre, c'est ma passion",
       description:
-        "J'aime apprendre de nouvelle chose c'est donc pour ça que je me suis créer un petit serveur chez moi sous Openmediavault et vps pour héberger mes projets en ligne.",
+        "J'aime apprendre de nouvelles choses, c'est donc pour ça que je me suis créé un petit serveur chez moi sous OpenMediaVault (Debian) et je loue un vps pour héberger mes projets en ligne.",
       icon: code_icon
       ,
     },
     {
       title: "Entre amis",
       description:
-        "En dehors du code, j'aime passer du temps avec ma famille et mes amis. Cela peut pour jouer a des jeux ensemble ou simplement boire un verre.",
+        "En dehors du code, j'aime passer du temps avec ma famille et mes amis, pour jouer à des jeux ensemble ou simplement boire un verre.",
       icon: beer_icon,
     },
     {
       title: "Ce qui me fait vibrer",
       description:
-        "J'ai toujours fait de la musique. J'ai commencer avec la clarinette puis le piano pendant le confinement et en 2024 j'ai commencer la guitare.",
+        "J'ai toujours fait de la musique. J'ai commencé avec la clarinette vers 8 ans. Puis j'ai poursuivi le piano pendant le confinement. Et en 2024, j'ai commencé la guitare en autodidacte.",
       icon: music_icon,
     },
     {
       title: "Le sport, une autre passion",
       description:
-        "Pratiquer du sport est aussi une de mes passions, j'ai toujours été actif dans le club de gym de mon village en tant qu'élève jusqu'à 19 ans et moniteur depuis mes 17 ans.",
+        "Pratiquer du sport est aussi une de mes passions, j'ai toujours été actif dans la société de gym de mon village en tant qu'élève jusqu'à 19 ans et moniteur depuis mes 17 ans.",
       icon: sport_icon,
     },
   ],
@@ -459,7 +459,7 @@ export const aboutMeData = {
     {
       title: "Learning is my passion",
       description:
-        "I love learning new things, so that's why I've set up a small server at home using Openmediavault and vps to host my online projects.",
+        "I love learning new things, so that's why I've set up a small server at home using Openmediavault (Debian)  and vps to host my online projects.",
       icon: code_icon
       ,
     },

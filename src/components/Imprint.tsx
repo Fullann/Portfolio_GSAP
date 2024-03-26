@@ -12,7 +12,7 @@ const Imprint = () => {
           <p>Fullann.ch</p>
           <p>Lausanne 1004 Suisse</p>
           <p>Email : nathan@fullann.ch</p>
-          <p>Responsable du contenu selon § 55 Abs. 2 RStV : [Votre nom]</p>
+          <p>Responsable du contenu selon § 55 Abs. 2 RStV : Nathan Füllemann</p>
         </article>
       ) : (
         <article className="flex flex-col gap-6 max-w-[70vw]">
@@ -20,7 +20,7 @@ const Imprint = () => {
           <p>Fullann.ch</p>
           <p>Lausanne 1004 Suisse</p>
           <p>Email: nathan@fullann.ch</p>
-          <p>Responsible for the content according to § 55 Abs. 2 RStV: [Your Name]</p>
+          <p>Responsible for the content according to § 55 Abs. 2 RStV: Nathan Füllemann</p>
         </article>
       )}
     </React.Fragment>
