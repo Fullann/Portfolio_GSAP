@@ -28,6 +28,7 @@ const Contact: React.FC = () => {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [error, setError] = useState<string | any>(null);
+  const [check, setCheck] = useState(false);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -36,15 +37,13 @@ const Contact: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  let check = false;
+
   const onToken = () => {
-    check = true;
+    setCheck(true);
   };
 
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
     setError(null);
-    console.log(error);
-
     e.preventDefault();
     if (!check) {
       if (language === "FR") {
@@ -54,15 +53,13 @@ const Contact: React.FC = () => {
       }
     } else {
       emailjs.sendForm(VITE_APP_MAIL_SERVICE, VITE_APP_MAIL_TEMPLATE, e.target, VITE_APP_MAIL_PUBLIC_KEY)
-        .then((result) => {
-          console.log(result.text);
+        .then(() => {
           if (language === "FR") {
             toast.success(toastMessages.successEmailSent.fr);
           } else {
             toast.success(toastMessages.successEmailSent.en);
           }
-        }, (error) => {
-          console.log(error.text);
+        }, () => {
           if (language === "FR") {
             toast.error(toastMessages.failedEmailSent.fr);
           } else {
@@ -275,10 +272,8 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 sitekey={REACT_APP_HCAPTCHA}
                 onVerify={onToken}
                 onExpire={() => onToken()}
-                onError={(err) => {
+                onError={() => {
                   onToken();
-
-                  console.error(err);
                 }}
               />
               <Button
