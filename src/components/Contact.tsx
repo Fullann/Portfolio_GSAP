@@ -186,23 +186,27 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
         </div>
         <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
           <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
-            <Highlight
-              code={codeSnippet}
-              language="tsx"
-              theme={themes.nightOwl}
-            >
-              {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={`${className} text-4xl `} style={style}>
-                  {tokens.map((line, i) => (
-                    <div {...getLineProps({ line, key: i })}>
-                      {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
-                      ))}
+          <Highlight
+            code={codeSnippet}
+            language="tsx"
+            theme={themes.nightOwl}
+          >
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre className={`${className} text-4xl`} style={style}>
+                {tokens.map((line, i) => {
+                  const lineProps = getLineProps({ line }); // Extract line props
+                  return (
+                    <div key={i} {...lineProps}>  {/* Key passed explicitly */}
+                      {line.map((token, key) => {
+                        const tokenProps = getTokenProps({ token }); // Extract token props
+                        return <span key={key} {...tokenProps} />;  {/* Key passed explicitly */}
+                      })}
                     </div>
-                  ))}
-                </pre>
-              )}
-            </Highlight>
+                  );
+                })}
+              </pre>
+            )}
+          </Highlight>
           </div>
           <form
             className="flex flex-col gap-6 justify-center items-center  px-32 w-1/2 max-lg:w-full max-lg:p-10"

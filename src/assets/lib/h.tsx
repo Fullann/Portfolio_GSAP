@@ -58,13 +58,13 @@ export const headerIntroData = {
   subtitle: "Fullstack Developer ",
   description: {
     fr: " J'ai découvert l'informatique lors d'un stage à l'âge de 15 ans et j'ai tout de suite aimé la créativité et la liberté que permet le développement informatique. Après 4 ans à l'ETML où j'ai obtenu un CFC en informatique et une maturité professionnelle, je suis actuellement en train de faire mon bachelor en sécurité informatique à la HEIG-VD.",
-    en: "I discovered IT on a work placement when I was 15 and I immediately loved the creativity and freedom that IT development allows. After 4 years at the ETML, from which I graduated with a CFC in computer science and a professional degree, I'm currently doing my bachelor's degree in computer security at the HEIG-VD.",
+    en: "I discovered IT during a work placement at the age of 15 and immediately fell in love with the creativity and freedom it offers. After 4 years at ETML, where I graduated with a CFC in computer science and a professional diploma, I am now pursuing a bachelor's degree in computer security at HEIG-VD.",
   },
   buttons: [
     {
       name: "Contact",
       label: {
-        fr: "Contcez-moi",
+        fr: "Contactez-moi",
         en: "Contact me",
       },
       icon: FiMail,
@@ -154,7 +154,7 @@ export const projectsData = [
   }, {
     title: "Art-Bleu",
     description:
-      "Ce site web a été réaliser pour une cliente qui souhaitait un site pour son atelier d'art-thérapie à l'Espace Chamarel à Vufflens-la-Ville. Il a été des créer avec WordPress et utilise un thème personnalisé.",
+      "Ce site web a été réalisé pour une cliente qui souhaitait un site pour son atelier d'art-thérapie à l'Espace Chamarel à Vufflens-la-Ville. Il a été créé avec WordPress et utilise un thème personnalisé.",
     description_EN:
       "This website was made for a client who wanted a website for his art therapy workshop at the chamarel space in Vufflens-la-Ville. It is made with WordPress and uses a custom theme.",
     technologies: [
@@ -377,7 +377,7 @@ export const quotesData = [
   },
   {
     fr: `"Le web est comme une toile et le code est la peinture. Crée ton chef-d'œuvre."`,
-    en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
+    en: `"The web is a canvas, and code is the paint. Craft your masterpiece."`,
   },
 ] as const;
 
@@ -391,7 +391,7 @@ export const recomendationData = {
       title: "Angelica Rosso",
       subtitle: "Directrice Recherche et Developpement",
       description:
-        "Organisé, concencieux, ponctuel et professionnel, Monsieur Füllemann, nous a fait une bonne impression. Il s'est aquitté des tâches confiées à notre entière satisfaction.",
+        "Organisé, concencieux, ponctuel et professionnel, Monsieur Füllemann, nous a fait une bonne impression. Il s'est acquitté des tâches confiées à notre entière satisfaction.",
       icon: solmani
       ,
     },
@@ -459,20 +459,20 @@ export const aboutMeData = {
     {
       title: "Learning is my passion",
       description:
-        "I love learning new things, so that's why I've set up a small server at home using Openmediavault (Debian)  and vps to host my online projects.",
+        "I love learning new things, which is why I set up a small home server using OpenMediaVault (Debian) and rent a VPS to host my online projects.",
       icon: code_icon
       ,
     },
     {
       title: "With friends",
       description:
-        "Outside the code, I like to spend time with my family and friends. This can be playing games together or just having a drink.",
+        "Outside of coding, I enjoy spending time with my family and friends, whether playing games together or simply sharing a drink.",
       icon: beer_icon,
     },
     {
       title: "What thrills me",
       description:
-        "I've always played music. I started with the clarinet, then the piano during my confinement and in 2024 I took up the guitar.",
+        "I've always been involved in music. I started with the clarinet, then moved on to piano during the lockdown, and in 2024 I began teaching myself the guitar.",
       icon: music_icon,
     },
     {
@@ -562,7 +562,7 @@ export const contactData = {
   },
   privacyOptIn: {
     description: {
-      fr: "En soumettant cette demande, vous reconnaissez avoir pris connaissance de la politique privée.",
+      fr: "En soumettant cette demande, vous reconnaissez avoir pris connaissance de la politique de confidentialité.",
       en: "By submitting this request, you acknowledge that you have read the Private Policy",
     },
   },
