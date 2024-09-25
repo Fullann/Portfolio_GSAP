@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
   const { ref } = useSectionInView("Contact");
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [error, setError] = useState<string | any>(null);
+  const [setError] = useState<string | any>(null);
   const [check, setCheck] = useState(false);
 
   const animationReference = useRef<HTMLDivElement>(null);
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
         toast.error(toastMessages.notCaptcha.en);
       }
     } else {
-      emailjs.sendForm(VITE_APP_MAIL_SERVICE, VITE_APP_MAIL_TEMPLATE, e.target, VITE_APP_MAIL_PUBLIC_KEY)
+      emailjs.sendForm(VITE_APP_MAIL_SERVICE, VITE_APP_MAIL_TEMPLATE,  e.target as HTMLFormElement, VITE_APP_MAIL_PUBLIC_KEY)
         .then(() => {
           if (language === "FR") {
             toast.success(toastMessages.successEmailSent.fr);
