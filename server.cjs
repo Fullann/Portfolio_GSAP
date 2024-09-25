@@ -11,8 +11,14 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Vérification de Phusion Passenger
+if (typeof(PhusionPassenger) !== 'undefined') {
+  // Configuration de Passenger
+  PhusionPassenger.configure({ autoInstall: false });
+  app.listen('passenger'); // Écoute sur Passenger
+} else {
+  const PORT = process.env.PORT || 3000; // Port par défaut
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+}
